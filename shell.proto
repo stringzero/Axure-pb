@@ -1,0 +1,12 @@
+syntax = "proto3";
+package network;
+option go_package = "./pb;network";
+option java_multiple_files = true;
+
+message shell_data{
+  bytes data = 1;
+}
+
+service Shell {
+  rpc Exec (stream shell_data) returns (stream shell_data);
+}
