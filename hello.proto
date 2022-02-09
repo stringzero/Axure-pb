@@ -1,0 +1,11 @@
+syntax = "proto3";
+package network;
+option go_package = "./pb;network";
+option java_multiple_files = true;
+
+service Hello {
+  rpc Hello (World) returns (World);
+}
+message World{
+  string value = 1;
+}
