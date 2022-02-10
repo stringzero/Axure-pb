@@ -24,6 +24,44 @@ const (
 	_ = protoimpl.EnforceVersion(protoimpl.MaxVersion - 20)
 )
 
+type Void struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+}
+
+func (x *Void) Reset() {
+	*x = Void{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_hello_proto_msgTypes[0]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *Void) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*Void) ProtoMessage() {}
+
+func (x *Void) ProtoReflect() protoreflect.Message {
+	mi := &file_hello_proto_msgTypes[0]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use Void.ProtoReflect.Descriptor instead.
+func (*Void) Descriptor() ([]byte, []int) {
+	return file_hello_proto_rawDescGZIP(), []int{0}
+}
+
 type World struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -35,7 +73,7 @@ type World struct {
 func (x *World) Reset() {
 	*x = World{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_hello_proto_msgTypes[0]
+		mi := &file_hello_proto_msgTypes[1]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -48,7 +86,7 @@ func (x *World) String() string {
 func (*World) ProtoMessage() {}
 
 func (x *World) ProtoReflect() protoreflect.Message {
-	mi := &file_hello_proto_msgTypes[0]
+	mi := &file_hello_proto_msgTypes[1]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -61,7 +99,7 @@ func (x *World) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use World.ProtoReflect.Descriptor instead.
 func (*World) Descriptor() ([]byte, []int) {
-	return file_hello_proto_rawDescGZIP(), []int{0}
+	return file_hello_proto_rawDescGZIP(), []int{1}
 }
 
 func (x *World) GetValue() string {
@@ -75,14 +113,16 @@ var File_hello_proto protoreflect.FileDescriptor
 
 var file_hello_proto_rawDesc = []byte{
 	0x0a, 0x0b, 0x68, 0x65, 0x6c, 0x6c, 0x6f, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x12, 0x07, 0x6e,
-	0x65, 0x74, 0x77, 0x6f, 0x72, 0x6b, 0x22, 0x1d, 0x0a, 0x05, 0x57, 0x6f, 0x72, 0x6c, 0x64, 0x12,
-	0x14, 0x0a, 0x05, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x05,
-	0x76, 0x61, 0x6c, 0x75, 0x65, 0x32, 0x30, 0x0a, 0x05, 0x48, 0x65, 0x6c, 0x6c, 0x6f, 0x12, 0x27,
-	0x0a, 0x05, 0x48, 0x65, 0x6c, 0x6c, 0x6f, 0x12, 0x0e, 0x2e, 0x6e, 0x65, 0x74, 0x77, 0x6f, 0x72,
-	0x6b, 0x2e, 0x57, 0x6f, 0x72, 0x6c, 0x64, 0x1a, 0x0e, 0x2e, 0x6e, 0x65, 0x74, 0x77, 0x6f, 0x72,
-	0x6b, 0x2e, 0x57, 0x6f, 0x72, 0x6c, 0x64, 0x42, 0x10, 0x50, 0x01, 0x5a, 0x0c, 0x2e, 0x2f, 0x70,
-	0x62, 0x3b, 0x6e, 0x65, 0x74, 0x77, 0x6f, 0x72, 0x6b, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f,
-	0x33,
+	0x65, 0x74, 0x77, 0x6f, 0x72, 0x6b, 0x22, 0x06, 0x0a, 0x04, 0x76, 0x6f, 0x69, 0x64, 0x22, 0x1d,
+	0x0a, 0x05, 0x57, 0x6f, 0x72, 0x6c, 0x64, 0x12, 0x14, 0x0a, 0x05, 0x76, 0x61, 0x6c, 0x75, 0x65,
+	0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x05, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x32, 0x56, 0x0a,
+	0x05, 0x48, 0x65, 0x6c, 0x6c, 0x6f, 0x12, 0x27, 0x0a, 0x05, 0x48, 0x65, 0x6c, 0x6c, 0x6f, 0x12,
+	0x0e, 0x2e, 0x6e, 0x65, 0x74, 0x77, 0x6f, 0x72, 0x6b, 0x2e, 0x57, 0x6f, 0x72, 0x6c, 0x64, 0x1a,
+	0x0e, 0x2e, 0x6e, 0x65, 0x74, 0x77, 0x6f, 0x72, 0x6b, 0x2e, 0x57, 0x6f, 0x72, 0x6c, 0x64, 0x12,
+	0x24, 0x0a, 0x04, 0x74, 0x6f, 0x64, 0x6f, 0x12, 0x0d, 0x2e, 0x6e, 0x65, 0x74, 0x77, 0x6f, 0x72,
+	0x6b, 0x2e, 0x76, 0x6f, 0x69, 0x64, 0x1a, 0x0d, 0x2e, 0x6e, 0x65, 0x74, 0x77, 0x6f, 0x72, 0x6b,
+	0x2e, 0x76, 0x6f, 0x69, 0x64, 0x42, 0x10, 0x50, 0x01, 0x5a, 0x0c, 0x2e, 0x2f, 0x70, 0x62, 0x3b,
+	0x6e, 0x65, 0x74, 0x77, 0x6f, 0x72, 0x6b, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
 }
 
 var (
@@ -97,15 +137,18 @@ func file_hello_proto_rawDescGZIP() []byte {
 	return file_hello_proto_rawDescData
 }
 
-var file_hello_proto_msgTypes = make([]protoimpl.MessageInfo, 1)
+var file_hello_proto_msgTypes = make([]protoimpl.MessageInfo, 2)
 var file_hello_proto_goTypes = []interface{}{
-	(*World)(nil), // 0: network.World
+	(*Void)(nil),  // 0: network.void
+	(*World)(nil), // 1: network.World
 }
 var file_hello_proto_depIdxs = []int32{
-	0, // 0: network.Hello.Hello:input_type -> network.World
-	0, // 1: network.Hello.Hello:output_type -> network.World
-	1, // [1:2] is the sub-list for method output_type
-	0, // [0:1] is the sub-list for method input_type
+	1, // 0: network.Hello.Hello:input_type -> network.World
+	0, // 1: network.Hello.todo:input_type -> network.void
+	1, // 2: network.Hello.Hello:output_type -> network.World
+	0, // 3: network.Hello.todo:output_type -> network.void
+	2, // [2:4] is the sub-list for method output_type
+	0, // [0:2] is the sub-list for method input_type
 	0, // [0:0] is the sub-list for extension type_name
 	0, // [0:0] is the sub-list for extension extendee
 	0, // [0:0] is the sub-list for field type_name
@@ -118,6 +161,18 @@ func file_hello_proto_init() {
 	}
 	if !protoimpl.UnsafeEnabled {
 		file_hello_proto_msgTypes[0].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*Void); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_hello_proto_msgTypes[1].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*World); i {
 			case 0:
 				return &v.state
@@ -136,7 +191,7 @@ func file_hello_proto_init() {
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
 			RawDescriptor: file_hello_proto_rawDesc,
 			NumEnums:      0,
-			NumMessages:   1,
+			NumMessages:   2,
 			NumExtensions: 0,
 			NumServices:   1,
 		},
@@ -163,6 +218,7 @@ const _ = grpc.SupportPackageIsVersion6
 // For semantics around ctx use and closing/ending streaming RPCs, please refer to https://godoc.org/google.golang.org/grpc#ClientConn.NewStream.
 type HelloClient interface {
 	Hello(ctx context.Context, in *World, opts ...grpc.CallOption) (*World, error)
+	Todo(ctx context.Context, in *Void, opts ...grpc.CallOption) (*Void, error)
 }
 
 type helloClient struct {
@@ -182,9 +238,19 @@ func (c *helloClient) Hello(ctx context.Context, in *World, opts ...grpc.CallOpt
 	return out, nil
 }
 
+func (c *helloClient) Todo(ctx context.Context, in *Void, opts ...grpc.CallOption) (*Void, error) {
+	out := new(Void)
+	err := c.cc.Invoke(ctx, "/network.Hello/todo", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 // HelloServer is the server API for Hello service.
 type HelloServer interface {
 	Hello(context.Context, *World) (*World, error)
+	Todo(context.Context, *Void) (*Void, error)
 }
 
 // UnimplementedHelloServer can be embedded to have forward compatible implementations.
@@ -193,6 +259,9 @@ type UnimplementedHelloServer struct {
 
 func (*UnimplementedHelloServer) Hello(context.Context, *World) (*World, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method Hello not implemented")
+}
+func (*UnimplementedHelloServer) Todo(context.Context, *Void) (*Void, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method Todo not implemented")
 }
 
 func RegisterHelloServer(s *grpc.Server, srv HelloServer) {
@@ -217,6 +286,24 @@ func _Hello_Hello_Handler(srv interface{}, ctx context.Context, dec func(interfa
 	return interceptor(ctx, in, info, handler)
 }
 
+func _Hello_Todo_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(Void)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(HelloServer).Todo(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/network.Hello/Todo",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(HelloServer).Todo(ctx, req.(*Void))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
 var _Hello_serviceDesc = grpc.ServiceDesc{
 	ServiceName: "network.Hello",
 	HandlerType: (*HelloServer)(nil),
@@ -224,6 +311,10 @@ var _Hello_serviceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "Hello",
 			Handler:    _Hello_Hello_Handler,
+		},
+		{
+			MethodName: "todo",
+			Handler:    _Hello_Todo_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
