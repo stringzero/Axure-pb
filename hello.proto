@@ -3,7 +3,7 @@ package network;
 option go_package = "./pb;network";
 option java_multiple_files = true;
 
-message void{
+message Empty{
 }
 message World{
   string value = 1;
@@ -11,5 +11,5 @@ message World{
 
 service Hello {
   rpc Hello (World) returns (World);
-  rpc todo(void) returns (void);
+  rpc Todo(Empty) returns (Empty);
 }
