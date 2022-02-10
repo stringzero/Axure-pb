@@ -11,5 +11,7 @@ message World{
 
 service Hello {
   rpc Hello (World) returns (World);
+  rpc Register (World) returns (World);
   rpc Todo(Empty) returns (Empty);
+
 }
