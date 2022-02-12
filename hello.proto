@@ -3,15 +3,10 @@ package network;
 option go_package = "./pb;network";
 option java_multiple_files = true;
 
-message Empty{
-}
-message World{
-  string value = 1;
-}
+import "msg.proto";
 
 service Hello {
   rpc Hello (World) returns (World);
   rpc Register (World) returns (World);
   rpc Todo(Empty) returns (Empty);
-
 }
